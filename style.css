@@ -1,0 +1,131 @@
+
+.outline_hand {
+    transform-origin: center bottom;
+    transform-box: fill-box;
+    animation: hand 3s ease-in-out infinite;
+}
+.fill_hand {
+    transform-origin: center bottom;
+    transform-box: fill-box;
+    animation: hand 3s ease-in-out infinite;
+}
+.big_plant_inside {
+    transform-origin: center bottom;
+    transform-box: fill-box;
+    animation: hand 3s ease-in-out infinite;
+}
+
+.palm{
+    transform-origin: center bottom;
+    transform-box: fill-box;
+    animation: hand 3s ease-in-out infinite;
+}
+.plant path {
+    transform-origin: center bottom;
+    transform-box: fill-box;
+    animation: hand 10s ease-in-out infinite;
+}
+.plant:nth-of-type(3) path {
+    animation: hand 7s ease-in-out infinite;
+}
+
+@keyframes hand {
+    0% {transform: rotate(-7deg)}
+    50% {transform: rotate(7deg)}
+    100% {transform: rotate(-7deg)}
+  }
+
+g path{
+    vector-effect: non-scaling-stroke;
+    stroke-width: 1.5px;
+}
+
+
+g#sun_mask path {
+    animation: sun_rotate 60s ease-in-out infinite;
+}
+
+
+@keyframes sun_rotate {
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(360deg)}
+}
+
+
+.eye_outline path, .eye_mask path {
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: wink 5s cubic-bezier(0.68,-0.55, 0.49, 1.46) infinite;
+}
+
+
+.eye_outline_2 path, .eye_mask_2 path {
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: wink 3s cubic-bezier(0.68,-0.55, 0.49, 1.46) infinite;
+}
+
+
+
+
+@keyframes wink {
+    0% {transform: scaleY(0.2)}
+    20% {transform: scaleY(1)}
+    80% {transform: scaleY(1)}
+    100% {transform: scaleY(0.2)}
+  }
+
+.pupil path{
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: focus 5s ease-in-out  infinite;
+}
+
+/* .pupil_2 path {
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: focus 7s ease-in-out  infinite;
+} */
+
+@keyframes focus {
+    0% {transform: scale(1) translateX(-100px)}
+    50% {transform: scale(.5) translateX(100px)}
+    100% {transform: scale(1) translateX(-100px)}
+}
+
+
+#palm path {
+    transform-origin: center bottom;
+    transform-box: fill-box;
+    animation: wiggle 7s ease-in-out  infinite;
+}
+
+@keyframes wiggle {
+    0% {transform: rotate(-7deg)}
+    50% {transform: rotate(7deg)}
+    100% {transform: rotate(-7deg)}
+  }
+
+
+g.cloud {
+    transform-origin: center bottom;
+    transform-box: fill-box;
+    animation: clouds 20s linear infinite;
+}
+
+@keyframes clouds {
+    0% {transform: translateX(-100vw)}
+    100% {transform: translateX(100vw)}
+}
+
+
+g.cloud_2 {
+    transform-origin: center bottom;
+    transform-box: fill-box;
+    animation: clouds_2 20s linear infinite;
+}
+
+@keyframes clouds_2 {
+    0% {transform: translateX(100vw)}
+    100% {transform: translateX(-100vw)}
+}
