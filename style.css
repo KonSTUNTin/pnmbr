@@ -1,25 +1,16 @@
 
-.outline_hand {
+.hand{
     transform-origin: center bottom;
     transform-box: fill-box;
     animation: hand 3s ease-in-out infinite;
 }
-.fill_hand {
-    transform-origin: center bottom;
-    transform-box: fill-box;
-    animation: hand 3s ease-in-out infinite;
-}
-.big_plant_inside {
+.all_hand{
     transform-origin: center bottom;
     transform-box: fill-box;
     animation: hand 3s ease-in-out infinite;
 }
 
-.palm{
-    transform-origin: center bottom;
-    transform-box: fill-box;
-    animation: hand 3s ease-in-out infinite;
-}
+
 .plant path {
     transform-origin: center bottom;
     transform-box: fill-box;
