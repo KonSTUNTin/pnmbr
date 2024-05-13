@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Circle</title>
+</head>
+<body>
+    <div id="svg-container"></div>
+
+    <script>
+        function createCircleSVG(centerX, centerY, radius, numPoints) {
+            var svg = '<svg width="' + radius * 2.2 + '" height="' + radius * 2.2 + '" xmlns="http://www.w3.org/2000/svg">';
+            var angleIncrement = (2 * Math.PI) / numPoints;
+
+            // Создаем точки окружности
+            var points = [];
+            for (var i = 0; i < numPoints; i++) {
+                var angle = i * angleIncrement;
+                var x = centerX + radius * Math.cos(angle);
+                var y = centerY + radius * Math.sin(angle);
+                points.push(x + ',' + y);
+            }
+
+            // Формируем строку атрибута 'points' для элемента 'polygon'
+            var pointsString = points.join(' ');
+
+            // Создаем SVG элемент окружности без кривых Безье
+            svg += '<polygon points="' + pointsString + '" fill="none" stroke="black" />';
+            svg += '</svg>';
+
+            return svg;
+        }
+
+    // Определяем параметры окружности
+    
+    var radius = 200;
+    var centerX = radius * 1.1;
+    var centerY = radius * 1.1;
+    var numPoints = 100; // Измените это число, чтобы получить больше или меньше точек
+
+    // Создаем SVG
+    var circleSVG = createCircleSVG(centerX, centerY, radius, numPoints);
+
+    // Вставляем SVG в HTML
+    document.getElementById('svg-container').innerHTML = circleSVG;
+
+    </script>
+</body>
+</html>
